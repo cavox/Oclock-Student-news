@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-article-url: #007bff;
+    --color-article-url_hover: #0056b3;
+    --color-bgheader: #f9f9f9;
+    --color-article-border: #eaeaea;
+    --color-work: #0766F0;
+    --color-team: #DC5E53;
+    --color-news: #98DC62;
+    --font-roboto: "Roboto";
+}
+
+body {
+    background-color: var(--color-bgheader);
+    display: flex;
+    /* justify-content: center ;  */
+    height: 100%;
+    justify-content: end;
+    font-family: var(--font-roboto);
+    user-select: none;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-image: url('../images/nicole.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 50vw;
+    color: #ffffff
+}
+
+.header__title {
+    display: flex;
+    width: 10%;
+    gap: 1rem;
+    padding: 1rem;
+
+}
+
+.header__title__img {
+    max-height: 2.6rem;
+}
+
+
+
+h1 {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.header__info {
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.459);
+    flex-direction: column;
+    margin: auto 1rem;
+    gap: 1rem;
+    text-align: right;
+    font-size: 1rem;
+    padding: 1rem;
+    line-height: 1.3rem;
+
+}
+
+.header__info__title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 1rem;
+
+
+}
+
+.header__info__subtitle {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.header__info__content {
+    font-size: 0.9rem;
+}
+
+.footer__desktop  {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem;
+   
+}
+
+.footer__desktop ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__desktop ul a {
+    color: #ffffff;
+    text-decoration: none;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.footer__mobile  {
+    display: none;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.footer__mobile ul {
+    display: none;
+    gap: 1rem;
+}
+
+.footer__mobile ul a {
+    color: #000000;
+    text-decoration: none;
+     /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); */
+}
+
+
+main {
+    display: flex;
+    width: 50vw;
+    flex: 2;
+    flex-wrap: wrap;
+    background-color: rgb(247, 247, 247);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 50%;
+    border: 1px solid var(--color-article-border);
+    gap: 1.5rem;
+    background-color: white;
+    transition: transform 1s ease-in-out;
+}
+article:hover{
+    transform: scale(0.95);
+}
+
+h3{
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.article__team .article__badge {
+    background-color: var(--color-team);
+}
+
+.article__news .article__badge {
+    background-color: var(--color-news);
+}
+
+.article__work .article__badge {
+    background-color: var(--color-work);
+}
+
+.article__badge {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 0.4rem 0.4rem;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.article__title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+}
+
+.article__author {
+    display: flex;    
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.article__author__photo {
+    max-height: 1.5rem;
+}
+
+.article__author__name {
+    font-weight: bold;
+}
+
+.article__author__date {
+    font-weight: normal;
+    font-size: 0.7rem;
+    color: rgb(110, 110, 110);
+}
+
+.article__content {
+    line-height: 1.3rem;
+}
+.article__link {
+    color: var(--color-article-url);
+    cursor: pointer;
+}
+.article__link:hover{
+    color: var(--color-article-url_hover);
+}
+
+@media (max-width: 750px) {
+    body{
+        flex-direction: column;
+    }
+
+    header {
+        position: relative;
+        width: 100%;
+        height: 40vh;
+    }
+    main {
+        width: 100%;
+        flex: 1;
+    }
+    .footer__desktop {
+        display: none;
+    }
+    .footer__mobile{
+        display: flex;
+    }
+    .footer__mobile ul{
+        display: flex;
+    }
+}
