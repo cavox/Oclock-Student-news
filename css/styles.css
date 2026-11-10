@@ -43,22 +43,17 @@ header {
 
 .header__title {
     display: flex;
-    width: 10%;
+    width: min-content;
     gap: 1rem;
     padding: 1rem;
-
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1;
 }
 
 .header__title__img {
     max-height: 2.6rem;
-}
-
-
-
-h1 {
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    font-weight: bold;
 }
 
 .header__info {
